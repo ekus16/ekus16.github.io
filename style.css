@@ -12,13 +12,14 @@ header {
     display: flex;
     align-items: flex-start;
     gap: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .profile-photo {
     width: 180px;
     height: 180px;
     object-fit: cover;
+    border-radius: 2px;
 }
 
 .header-text {
@@ -27,14 +28,16 @@ header {
 
 h1 {
     font-size: 32px;
+    font-weight: 600;
     margin-top: 0;
     margin-bottom: 8px;
 }
 
 h2 {
-    font-size: 23px;
-    margin-top: 45px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 42px;
+    margin-bottom: 16px;
 }
 
 p {
@@ -55,29 +58,89 @@ a:hover {
     margin-top: 15px;
 }
 
-.publication {
-    margin-bottom: 22px;
+.publication-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    column-gap: 22px;
+    margin-bottom: 24px;
+}
+
+.venue {
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.publication-content {
+    min-width: 0;
 }
 
 .publication-title {
-    font-weight: bold;
+    font-weight: 500;
+    line-height: 1.45;
 }
 
-.publication-venue {
-    font-style: italic;
+.publication-authors {
+    margin-top: 2px;
+    line-height: 1.45;
+}
+
+.publication-links {
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.publication-links a {
+    color: #0055aa;
+}
+
+strong {
+    font-weight: 600;
+}
+
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
 }
 
 @media (max-width: 650px) {
+
     body {
-        margin-top: 30px;
+        margin: 30px auto;
+        padding: 0 20px;
+        font-size: 15px;
     }
 
     header {
         flex-direction: column;
+        gap: 20px;
+        margin-bottom: 35px;
     }
 
     .profile-photo {
         width: 150px;
         height: 150px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 21px;
+        margin-top: 35px;
+    }
+
+    .publication-row {
+        grid-template-columns: 1fr;
+        row-gap: 2px;
+        margin-bottom: 24px;
+    }
+
+    .venue {
+        font-weight: 600;
+        margin-bottom: 2px;
     }
 }
