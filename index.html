@@ -917,6 +917,30 @@
 
 </section>
 
+    <script>
+        const academicLink = document.getElementById("academic-link");
+        const industryLink = document.getElementById("industry-link");
+        const cvLink = document.getElementById("cv-link");
+
+        academicLink.addEventListener("click", function () {
+            academicLink.classList.add("active");
+            industryLink.classList.remove("active");
+
+            cvLink.href = "academic_cv.pdf";
+            cvLink.download = "Erdem_Kus_Academic_CV.pdf";
+            cvLink.textContent = "Academic CV";
+        });
+
+        industryLink.addEventListener("click", function () {
+            industryLink.classList.add("active");
+            academicLink.classList.remove("active");
+
+            cvLink.href = "industry_cv.pdf";
+            cvLink.download = "Erdem_Kus_Industry_CV.pdf";
+            cvLink.textContent = "Industry CV";
+        });
+    </script>
+
 </body>
 
 </html>
