@@ -439,6 +439,80 @@ a:hover {
 
 
 /* =========================================================
+   INDUSTRY COMPANY GROUPS
+   ========================================================= */
+
+.company-group {
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+
+    column-gap: 32px;
+
+    align-items: start;
+
+    margin-bottom: 42px;
+}
+
+
+.company-column {
+    padding-top: 1px;
+}
+
+
+.company-name {
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    color: var(--st-andrews-blue);
+}
+
+
+.company-location {
+    margin-top: 4px;
+
+    font-size: 12.8px;
+
+    line-height: 1.45;
+
+    color: var(--text-muted);
+}
+
+
+.company-details {
+    min-width: 0;
+}
+
+
+.company-role {
+    margin-bottom: 25px;
+}
+
+
+.industry-project {
+    margin-top: 23px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e8e8e8;
+}
+
+
+.industry-project-label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
    FOOTER
    ========================================================= */
 
@@ -592,6 +666,31 @@ footer {
 
     .publication-authors {
         font-size: 14.5px;
+    }
+
+
+    .company-group {
+        grid-template-columns: 1fr;
+
+        row-gap: 8px;
+
+        margin-bottom: 36px;
+    }
+
+
+    .company-column {
+        margin-bottom: 5px;
+    }
+
+
+    .company-location br {
+        display: none;
+    }
+
+
+    .industry-project {
+        margin-top: 20px;
+        padding-top: 17px;
     }
 
 }
