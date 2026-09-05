@@ -23,25 +23,24 @@ body {
 header {
     display: flex;
     align-items: flex-start;
-    gap: 34px;
+    gap: 36px;
 
     margin-bottom: 48px;
 }
 
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
 
     object-fit: cover;
-    object-position: center 35%;
+    object-position: center 38%;
 
     border-radius: 5px;
 
     flex-shrink: 0;
 
-    /* Slightly aligns the photo with the heading block */
-    margin-top: 5px;
+    margin-top: 14px;
 }
 
 
