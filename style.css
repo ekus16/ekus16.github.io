@@ -1,6 +1,5 @@
 :root {
     --st-andrews-blue: #00539b;
-    --st-andrews-mid-blue: #007dc5;
 
     --text-main: #242424;
     --text-secondary: #404040;
@@ -157,11 +156,11 @@ strong {
 /* LINKS */
 
 a {
-    color: var(--st-andrews-mid-blue);
+    color: var(--st-andrews-blue);
 
     text-decoration: none;
 
-    transition: color 0.15s ease;
+    transition: opacity 0.15s ease;
 }
 
 
@@ -169,6 +168,8 @@ a:hover {
     color: var(--st-andrews-blue);
 
     text-decoration: underline;
+
+    opacity: 0.85;
 }
 
 
@@ -281,7 +282,7 @@ a:hover {
 
 
 .publication-links a {
-    color: var(--st-andrews-mid-blue);
+    color: var(--st-andrews-blue);
 
     font-weight: 500;
 }
