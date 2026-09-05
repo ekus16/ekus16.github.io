@@ -4,10 +4,16 @@
     --text-main: #242424;
     --text-secondary: #404040;
     --text-muted: #666666;
+
+    --border-light: #e0e4e8;
+    --tab-background: #f1f3f5;
+    --tab-hover: #e4eaf0;
 }
 
 
-/* PAGE */
+/* =========================================================
+   PAGE
+   ========================================================= */
 
 html {
     scroll-behavior: smooth;
@@ -27,7 +33,6 @@ body {
 
     font-size: 15.5px;
     line-height: 1.65;
-
     font-weight: 400;
 
     -webkit-font-smoothing: antialiased;
@@ -35,7 +40,14 @@ body {
 }
 
 
-/* HEADER */
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 header {
     display: block;
@@ -113,7 +125,9 @@ header {
 }
 
 
-/* PROFILE NAVIGATION */
+/* =========================================================
+   PROFILE NAVIGATION
+   ========================================================= */
 
 .profile-nav {
     display: flex;
@@ -136,9 +150,9 @@ header {
 
     padding: 3px;
 
-    background: #f1f3f5;
+    background: var(--tab-background);
 
-    border: 1px solid #e0e4e8;
+    border: 1px solid var(--border-light);
     border-radius: 7px;
 }
 
@@ -148,6 +162,12 @@ header {
 
     padding: 7px 15px;
 
+    border: none;
+    border-radius: 5px;
+
+    background: transparent;
+
+    font-family: inherit;
     font-size: 14px;
     font-weight: 600;
 
@@ -155,9 +175,7 @@ header {
 
     color: var(--st-andrews-blue);
 
-    border-radius: 5px;
-
-    text-decoration: none;
+    cursor: pointer;
 
     transition:
         background 0.15s ease,
@@ -166,11 +184,9 @@ header {
 
 
 .mode-tab:hover {
-    background: #e4eaf0;
+    background: var(--tab-hover);
 
-    text-decoration: none;
-
-    opacity: 1;
+    color: var(--st-andrews-blue);
 }
 
 
@@ -178,6 +194,19 @@ header {
     color: #ffffff;
 
     background: var(--st-andrews-blue);
+}
+
+
+.mode-tab.active:hover {
+    color: #ffffff;
+
+    background: var(--st-andrews-blue);
+}
+
+
+.mode-tab:focus-visible {
+    outline: 2px solid var(--st-andrews-blue);
+    outline-offset: 2px;
 }
 
 
@@ -210,7 +239,9 @@ header {
 }
 
 
-/* TYPOGRAPHY */
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
 
 h1 {
     font-size: 34px;
@@ -255,7 +286,9 @@ strong {
 }
 
 
-/* LINKS */
+/* =========================================================
+   LINKS
+   ========================================================= */
 
 a {
     color: var(--st-andrews-blue);
@@ -275,7 +308,9 @@ a:hover {
 }
 
 
-/* NEWS */
+/* =========================================================
+   NEWS
+   ========================================================= */
 
 .news-list {
     margin-bottom: 36px;
@@ -302,14 +337,18 @@ a:hover {
 }
 
 
-/* MAJOR SECTIONS */
+/* =========================================================
+   PROFILE SECTIONS
+   ========================================================= */
 
 .major-section {
     scroll-margin-top: 30px;
 }
 
 
-/* TWO-COLUMN ROWS */
+/* =========================================================
+   TWO-COLUMN ROWS
+   ========================================================= */
 
 .publication-row {
     display: grid;
@@ -388,8 +427,6 @@ a:hover {
 }
 
 
-/* PUBLICATION SUMMARY */
-
 .publication-summary {
     margin-top: 5px;
 
@@ -401,7 +438,9 @@ a:hover {
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
     margin-top: 60px;
@@ -416,7 +455,9 @@ footer {
 }
 
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 700px) {
 
@@ -483,11 +524,6 @@ footer {
     }
 
 
-    .mode-tabs {
-        width: auto;
-    }
-
-
     .mode-tab {
         padding: 7px 14px;
 
@@ -543,11 +579,7 @@ footer {
     .venue {
         font-size: 14.5px;
 
-        font-weight: 600;
-
         line-height: 1.5;
-
-        white-space: normal;
 
         overflow-wrap: break-word;
     }
